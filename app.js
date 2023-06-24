@@ -30,14 +30,24 @@ app.get("/compose",(req,res)=>{
   res.render("compose");
 })
 app.post("/compose",(req,res)=>{
-  const obj={
+    const obj={
     title:req.body.msgtitle,
     content:req.body.msgbody
   };
   arrobj.push(obj);
   res.redirect("/");
-  
 })
+
+app.get("/posts/:postName",(req,res)=>{
+  const pName=req.params.postName;
+  arrobj.forEach(element => {
+    if (pName==element["title"]){
+      console.log("Match Found");
+    }
+  });
+
+});
+
 
 
 
