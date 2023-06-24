@@ -45,7 +45,9 @@ app.get("/posts/:postName",(req,res)=>{
       console.log("Match Found");
     }
   });
-
+app.post("/",(req,res)=>{
+  //hello
+})
 });
 
 
