@@ -3,6 +3,7 @@
 <p><%= homecontent %></p>
 <% postarr.forEach((ele)=> { %>
     <h1><%= ele['title']; %> </h1>
-    <p><%= ele['content']; %></p>
+    <p><%= ele['content'].substring(0,100)+ " ..."; %></p>
+    <a href="/posts/<%=ele['title'];%>"> Read More!</a>
     <% }); %>
 <%- include("partials/footer"); -%>
